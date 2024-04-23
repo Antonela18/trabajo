@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: var(--secundario);
+    color: var(--texto);
+    border: 1px solid #fff;
+}
+h1{
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+header{
+    width: 100%;
+    font-family: sans-serif;    
+    color: #282727;
+    background-color: #515151;
+    border: 1px solid #fff;
+}
+#btn-menu{
+    display: none;
+    justify-content: center;
+}
+header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+ 
+}
+header label:hover{
+    cursor: pointer;
+    background-color: rgb(0,0,0,0.3 );
+}
+.menu ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.menu li{
+    flex-grow: 1;
+    text-align: center;
+}
+.menu li:hover{
+    background: rgb(0,0,0,0.3);
+}
+.menu li a{
+    display: block;
+    padding: 15px 20px;
+    color: var(--acento);
+    text-decoration: none;
+}
+@media (max-width: 768px){
+
+    header label{
+        display: block;
+    }
+    
+   .menu{
+    position: absolute;
+    background:#515151;
+    width: 70%;
+    margin-left: -70%;
+    transition: all 0.4s;
+   }
+   .menu ul{
+    flex-direction: column;
+   }
+
+   .menu li{
+    border-top: 1.5px solid var(--secundario);
+   }
+
+   #btn-menu:checked ~ .menu{
+    margin: 0;
+   }
+}
+:root{
+    --principal:#615d5e;
+    --secundario:#908f8f;
+    --acento:#b3331c;
+    --texto:#0c0c0c;
+}
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    font-family: "Playfair Display", serif;
+}
+
+.item{
+    background-color: var(--principal);
+    width: 100%;
+    max-width: 400px;
+    border: 3px solid #282727;
+    padding: 10px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+.imagenes{
+    height: auto; 
+}
+
+.texto{ 
+font-size: 1em;
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  margin-top: 6px;
+}
+i {
+    font-size: 0.7em;
+    padding: 5px;
+    color: var(--acento);
+    
+}
+@media screen and (min-width: 600px) {
+    .contenedor {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+}
